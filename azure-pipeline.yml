@@ -28,10 +28,6 @@ variables:
     value: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
   - name: 'sonarCloud'
     value: 'bipSonarCloud-Tidsbruksprosjektet'
-  - name: 'mavenServices'
-    type: object
-    default:
-      postgres: ubuntu:latest
 
 resources:
   repositories:
@@ -53,4 +49,3 @@ jobs:
       checkStyleRunAnalysis: false
       connections: $(connections)
       sonarCloud: $(sonarCloud)
-      mavenServices: $(mavenServices)
