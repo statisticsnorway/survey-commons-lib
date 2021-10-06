@@ -27,7 +27,7 @@ variables:
   - name: MAVEN_OPTS
     value: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
   - name: 'sonarCloud'
-    value: 'bipSonarCloud-Tidsbruk'
+    value: 'bipSonarCloudTidsbruk'
 
 resources:
   repositories:
