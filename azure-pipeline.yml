@@ -22,6 +22,10 @@ variables:
     value: 'refs/heads/master'
   - name: 'connections'
     value: 'mvnSsbBipPublic-Tidsbruksprosjektet, mvnSsbBipReleases-Tidsbruksprosjektet, mvnSsbBipSnapshots-Tidsbruksprosjektet'
+  - name:  MAVEN_CACHE_FOLDER
+    value: $(Pipeline.Workspace)/.m2/repository
+  - name: MAVEN_OPTS
+    value: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
 
 resources:
   repositories:
