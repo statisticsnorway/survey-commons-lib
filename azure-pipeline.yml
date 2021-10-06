@@ -49,3 +49,4 @@ jobs:
       checkStyleRunAnalysis: false
       connections: $(connections)
       sonarCloud: $(sonarCloud)
+      mavenServices: 'ubuntu:latest'
