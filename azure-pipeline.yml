@@ -26,6 +26,8 @@ variables:
     value: $(Pipeline.Workspace)/.m2/repository
   - name: MAVEN_OPTS
     value: '-Dmaven.repo.local=$(MAVEN_CACHE_FOLDER)'
+  - name: sonarCloud
+    value: sonarCloud-Tidsbruk
 
 resources:
   repositories:
@@ -46,6 +48,7 @@ jobs:
       mavenContainer: maven:3-openjdk-16
       checkStyleRunAnalysis: false
       connections: $(connections)
+      sonarCloud: $(sonarCloud)
 
 
 
