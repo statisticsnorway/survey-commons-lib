@@ -42,7 +42,6 @@ jobs:
       mavenContainer: maven:3-openjdk-16
       checkStyleRunAnalysis: false
       connections: $(connections)
-      gcrServiceConnection: $(gcrServiceConnection)
 
 
 
