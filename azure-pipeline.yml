@@ -34,8 +34,8 @@ resources:
     - repository: templates
       type: github
       name: statisticsnorway/azure-pipelines-templates
-#      ref: refs/tags/1.1.20
-      ref: maven-sonarQube-to-sonarCloud
+      ref: refs/tags/1.1.23
+#      ref: maven-sonarQube-to-sonarCloud
       endpoint: github-Tidsbruksprosjektet
 
 # Job which runs mvn test and verify, Sonar Analysis (if branch is master), mvn install,
