@@ -10,6 +10,7 @@
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
+        <artifactregistry.version>2.1.1</artifactregistry.version>
     </properties>
 
     <scm>
@@ -75,24 +76,25 @@
             <id>ssb-bip</id>
             <repositories>
                 <repository>
-                    <id>ssb-bip-releases</id>
-                    <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-public/</url>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-north1-maven.pkg.dev/artifact-registry-14da/maven-releases</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
             </repositories>
             <distributionManagement>
-                <repository>
-                    <id>ssb-bip-releases</id>
-                    <name>SSB Nexus Releases</name>
-                    <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-releases/</url>
-                </repository>
                 <snapshotRepository>
-                    <id>ssb-bip-snapshots</id>
-                    <name>SSB Snapshot Repository</name>
-                    <url>https://nexus.prod-bip-ci.ssb.no/repository/maven-snapshots/</url>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-north1-maven.pkg.dev/artifact-registry-14da/maven-snapshots</url>
                 </snapshotRepository>
+                <repository>
+                    <id>artifact-registry</id>
+                    <url>artifactregistry://europe-north1-maven.pkg.dev/artifact-registry-14da/maven-releases</url>
+                </repository>
             </distributionManagement>
         </profile>
     </profiles>
@@ -124,6 +126,13 @@
 
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>com.google.cloud.artifactregistry</groupId>
+                <artifactId>artifactregistry-maven-wagon</artifactId>
+                <version>${artifactregistry.version}</version>
+            </extension>
+        </extensions>
         <pluginManagement>
             <plugins>
                 <plugin>
