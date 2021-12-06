@@ -20,8 +20,6 @@ variables:
   # Azure Pipelines
   - name: masterTag
     value: 'refs/heads/master'
-  - name: 'connections'
-    value: 'mvnSsbBipPublic-Tidsbruksprosjektet, mvnSsbBipReleases-Tidsbruksprosjektet, mvnSsbBipSnapshots-Tidsbruksprosjektet'
   - name:  MAVEN_CACHE_FOLDER
     value: $(Pipeline.Workspace)/.m2/repository
   - name: MAVEN_OPTS
@@ -34,18 +32,17 @@ resources:
     - repository: templates
       type: github
       name: statisticsnorway/azure-pipelines-templates
-      ref: refs/tags/1.1.23
-#      ref: maven-sonarQube-to-sonarCloud
+      ref: refs/tags/1.1.26
+#      ref: use_gar_instead_of_nexus_maven
       endpoint: github-Tidsbruksprosjektet
 
 # Job which runs mvn test and verify, Sonar Analysis (if branch is master), mvn install,
 # builds Docker image, pushes this to GCR and checks for any image vulnerabilities
 jobs:
-  - template: complete-builds/job-lib-test-nexus.yml@templates
+  - template: complete-builds/job-lib-test-gar.yml@templates
     parameters:
       project: timeuse
       artifactName: survey-commons-lib
       mavenContainer: maven:3-openjdk-16
       checkStyleRunAnalysis: false
-      connections: $(connections)
       sonarCloud: $(sonarCloud)
