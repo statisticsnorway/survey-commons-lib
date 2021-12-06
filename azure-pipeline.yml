@@ -32,8 +32,8 @@ resources:
     - repository: templates
       type: github
       name: statisticsnorway/azure-pipelines-templates
-#      ref: refs/tags/1.1.23
-      ref: use_gar_instead_of_nexus_maven
+      ref: refs/tags/1.1.26
+#      ref: use_gar_instead_of_nexus_maven
       endpoint: github-Tidsbruksprosjektet
 
 # Job which runs mvn test and verify, Sonar Analysis (if branch is master), mvn install,
