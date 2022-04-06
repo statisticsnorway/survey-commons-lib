@@ -23,7 +23,6 @@ public class CodeList {
 
             entry("01", new CodeInfo("Rekruttert",List.of(Status.RECRUITMENT))),
             entry("02", new CodeInfo("Påbegynt",List.of(Status.RECRUITMENT))),
-            entry("03", new CodeInfo("Ikke påbegynt",List.of(Status.RECRUITMENT))),
 
             /**
              * drop-out codes

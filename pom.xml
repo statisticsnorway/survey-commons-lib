@@ -10,7 +10,7 @@
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
-        <artifactregistry.version>2.1.1</artifactregistry.version>
+        <artifactregistry.version>2.1.4</artifactregistry.version>
     </properties>
 
     <scm>
