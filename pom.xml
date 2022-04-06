@@ -4,13 +4,13 @@
 
     <groupId>no.ssb.surveys</groupId>
     <artifactId>survey-commons-lib</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
-        <artifactregistry.version>2.1.1</artifactregistry.version>
+        <artifactregistry.version>2.1.4</artifactregistry.version>
     </properties>
 
     <scm>
