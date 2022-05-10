@@ -4,7 +4,7 @@
 
     <groupId>no.ssb.surveys</groupId>
     <artifactId>survey-commons-lib</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -17,7 +17,7 @@
         <connection>scm:git:git://github.com/statisticsnorway/survey-commons-lib.git</connection>
         <developerConnection>scm:git:git@github.com:statisticsnorway/survey-commons-lib.git</developerConnection>
         <url>https://github.com/statisticsnorway/survey-commons-lib</url>
-        <tag>1.0.7</tag>
+        <tag>1.0</tag>
     </scm>
 
     <profiles>
