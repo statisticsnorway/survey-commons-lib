@@ -6,14 +6,12 @@ import com.google.cloud.pubsub.v1.Publisher;
 import com.google.protobuf.ByteString;
 import com.google.pubsub.v1.PubsubMessage;
 import com.google.pubsub.v1.TopicName;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
 public class BlaisePublisher {
 
     private String mainSurveyId;
@@ -48,7 +46,7 @@ public class BlaisePublisher {
 
             ApiFuture<String> messageIdFuture = publisher.publish(pubsubMessage);
             String messageId = messageIdFuture.get();
-            log.info("Published message ID: {}", messageId);
+            System.out.printf("Published message ID: %s", messageId);
 
         } finally {
             if (publisher != null) {
