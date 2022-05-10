@@ -12,6 +12,8 @@ import java.util.List;
 @Slf4j
 public class BlaiseSubscriber {
 
+    private BlaiseSubscriber() {}
+
     public static void subscribe(String projectId, String subscriptionId, BlaiseMessageHandler handler) {
         ProjectSubscriptionName subscriptionName =
                 ProjectSubscriptionName.of(projectId, subscriptionId);
@@ -20,8 +22,8 @@ public class BlaiseSubscriber {
         MessageReceiver receiver =
                 (PubsubMessage message, AckReplyConsumer consumer) -> {
                     // Handle incoming message, then ack the received message.
-                    System.out.println("Id: " + message.getMessageId());
-                    System.out.println("Data: " + message.getData().toStringUtf8());
+                    log.info("Id: " + message.getMessageId());
+                    log.info("Data: " + message.getData().toStringUtf8());
                     handler.process(message);
                     consumer.ack();
                 };

@@ -18,16 +18,16 @@ public class BlaisePublisher {
 
     private String mainSurveyId;
 
-    private static BlaisePublisher publisher = null;
+    private static BlaisePublisher blaisePublisher = null;
 
     private BlaisePublisher() {
     }
 
     public static BlaisePublisher getInstance() {
-        if (publisher == null) {
-            publisher = new BlaisePublisher();
+        if (blaisePublisher == null) {
+            blaisePublisher = new BlaisePublisher();
         }
-        return publisher;
+        return blaisePublisher;
     }
 
     public void publish(String projectId, String topicId, BlaiseMessage message) throws IOException, ExecutionException, InterruptedException {
