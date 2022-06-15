@@ -5,7 +5,6 @@ import java.util.Map;
 
 import static java.util.Map.entry;
 
-@AllArgsConstructor
 public class CodeList {
 
     public static final Map<String, CodeInfo> status = Map.ofEntries(
