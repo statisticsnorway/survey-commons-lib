@@ -1,7 +1,5 @@
 package no.ssb.survey.surveycommons.codelist;
 
-import lombok.AllArgsConstructor;
-
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +16,7 @@ public class CodeList {
             entry("STARTED", new CodeInfo("Påbegynt",List.of(Status.SURVEY, Status.DIARY, Status.QUESTIONNAIRE))),
             entry("NOT_STARTED", new CodeInfo("Ikke påbegynt",List.of(Status.RECRUITMENT, Status.SURVEY, Status.DIARY, Status.QUESTIONNAIRE))),
 
-            entry("INTERVIEWED", new CodeInfo("Intervjuet",List.of(Status.SURVEY))),
+            entry("INTERVIEWED", new CodeInfo("Rekruttert",List.of(Status.SURVEY))),
             entry("LOGININFO_SENT", new CodeInfo("Innloggingsinformasjon sendt",List.of(Status.SURVEY))),
 
             entry("01", new CodeInfo("Rekruttert",List.of(Status.RECRUITMENT))),
